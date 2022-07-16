@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/view_top"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/zero"
+        android:background="@color/dark_blue"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/view_bottom" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/average_margin"
+        android:layout_marginTop="@dimen/average_margin"
+        android:text="@string/settings"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/big_text_size"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageview_profile"
+        android:layout_width="@dimen/person_icon_size"
+        android:layout_height="@dimen/person_icon_size"
+        android:layout_marginBottom="@dimen/big_margin"
+        android:src="@drawable/person_icon_png_transparent"
+        app:layout_constraintTop_toTopOf="@id/view_top"
+        app:layout_constraintBottom_toTopOf="@id/textview_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:text="@string/your_name"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/above_average_text_size"
+        app:layout_constraintBottom_toTopOf="@id/textview_career"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageview_profile" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_career"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/average_margin"
+        android:text="@string/career"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/below_average_text_size"
+        app:layout_constraintBottom_toTopOf="@id/textview_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_name" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_address"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/below_average_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/view_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_career" />
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/zero"
+        android:background="@color/white"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_top" />
+
+    <ImageView
+        android:id="@+id/imageview_f"
+        android:src="@drawable/ic_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/very_big_margin"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toTopOf="@id/view_bottom"
+        app:layout_constraintBottom_toTopOf="@id/textview_go_to_setting"
+        app:layout_constraintStart_toStartOf="@id/view_bottom"
+        app:layout_constraintEnd_toStartOf="@id/imageview_in"
+        android:contentDescription="@string/facebook" />
+
+    <ImageView
+        android:id="@+id/imageview_in"
+        android:src="@drawable/ic_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/view_bottom"
+        app:layout_constraintBottom_toTopOf="@id/textview_go_to_setting"
+        app:layout_constraintStart_toEndOf="@id/imageview_f"
+        app:layout_constraintEnd_toStartOf="@id/imageview_vk"
+        android:contentDescription="@string/linkedin" />
+
+    <ImageView
+        android:id="@+id/imageview_vk"
+        android:src="@drawable/ic_vk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/very_big_margin"
+        app:layout_constraintTop_toTopOf="@id/view_bottom"
+        app:layout_constraintBottom_toTopOf="@id/textview_go_to_setting"
+        app:layout_constraintStart_toEndOf="@id/imageview_in"
+        app:layout_constraintEnd_toEndOf="@id/view_bottom"
+        android:contentDescription="@string/vkontakte" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/view_bottom"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_go_to_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/go_to_settings"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/below_average_text_size"
+        app:layout_constraintBottom_toTopOf="@id/button_editprofile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_editprofile"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/average_margin"
+        android:layout_marginEnd="@dimen/average_margin"
+        android:background="@drawable/button_style_transparent_with_stroke"
+        android:text="@string/edit_profile"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textSize="@dimen/below_average_text_size"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/textview_go_to_setting"
+        app:layout_constraintBottom_toTopOf="@id/button_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_edit"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/average_margin"
+        android:layout_marginEnd="@dimen/average_margin"
+        android:background="@drawable/button_style_orange"
+        android:text="@string/view_my_contacts"
+        android:textColor="@color/white"
+        app:cornerRadius="@dimen/corner_radius_button_size"
+        app:layout_constraintTop_toBottomOf="@id/button_editprofile"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Мой профиль</string>
+    <string name="settings">Настройки</string>
+    <string name="your_name">Ваше имя</string>
+    <string name="career">Карьера</string>
+    <string name="go_to_settings">Зайдите в настройки и заполните профиль</string>
+    <string name="home_address">Домашний адрес</string>
+    <string name="facebook">facebook</string>
+    <string name="linkedin">linkedin</string>
+    <string name="vkontakte">vkontakte</string>
+    <string name="view_my_contacts">посмотреть мои контакты</string>
+    <string name="edit_profile">Редактировать профиль</string>
+    <string name="acquainted">Давай познакомимся</string>
+    <string name="fill_profile">Заполняйте профиль и переходите к заявке!</string>
+    <string name="email">Эл. адрес</string>
+    <string name="password">Пароль</string>
+    <string name="register">Регистрация</string>
+    <string name="remember">Запомните меня</string>
+    <string name="google">Google</string>
+    <string name="terms">Нажимая «Зарегистрироваться», вы соглашаетесь с нашими \nУсловиями использования.</string>
+    <string name="account">У вас уже есть аккаунт?</string>
+    <string name="sign">Войти</string>
+    <string name="or">или</string>
+    <string name="invalid_email_message">Неверный адрес электронной почты.</string>
+    <string name="invalid_password_message">Используйте 8 или более символов с сочетанием букв
+        и цифр.</string>
+</resources>

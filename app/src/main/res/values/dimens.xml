@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="average_margin">16dp</dimen>
+    <dimen name="big_margin">24dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="person_icon_size">113dp</dimen>
+    <dimen name="big_text_size">24sp</dimen>
+    <dimen name="above_average_text_size">18sp</dimen>
+    <dimen name="average_text_size">16sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="below_average_text_size">14sp</dimen>
+    <dimen name="below_average_margin">12dp</dimen>
+    <dimen name="very_big_margin">56dp</dimen>
+    <dimen name="corner_radius_button_size">100dp</dimen>
+</resources>

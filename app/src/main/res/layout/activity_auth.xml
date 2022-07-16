@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark_blue">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_acquainted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/acquainted"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/big_text_size"
+        android:layout_marginBottom="@dimen/small_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textview_profile_fill_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_profile_fill_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fill_profile"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintBottom_toTopOf="@id/input_email"
+        app:layout_constraintTop_toBottomOf="@id/textview_acquainted"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:textColorHint="@color/gray"
+        android:layout_marginTop="@dimen/big_margin"
+        app:errorEnabled="true"
+        app:expandedHintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@id/input_password"
+        app:layout_constraintTop_toBottomOf="@id/textview_profile_fill_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_blue"
+            android:inputType="textEmailAddress"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:textColorHint="@color/gray"
+        app:errorEnabled="true"
+        app:expandedHintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@id/checkbox_remember"
+        app:layout_constraintTop_toBottomOf="@id/input_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_blue"
+            android:inputType="textPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox_remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/average_margin"
+        app:layout_constraintBottom_toTopOf="@id/button_google"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_password" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/remember"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/below_average_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/checkbox_remember"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_remember"
+        app:layout_constraintTop_toTopOf="@+id/checkbox_remember" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_google"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/average_margin"
+        android:layout_marginEnd="@dimen/average_margin"
+        android:background="@drawable/button_style_white"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/google"
+        android:textColor="@color/black"
+        android:textSize="@dimen/average_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_password" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/or"
+        android:textColor="@color/white"
+        android:textSize="@dimen/above_average_text_size"
+        app:layout_constraintBottom_toTopOf="@id/button_register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_google" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_register"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/average_margin"
+        android:layout_marginEnd="@dimen/average_margin"
+        android:background="@drawable/button_style_orange_transparent"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textSize="@dimen/average_text_size"
+        app:layout_constraintTop_toBottomOf="@id/textview_or"
+        app:layout_constraintBottom_toTopOf="@id/textview_terms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center"
+        android:text="@string/terms"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small_text_size"
+        android:lines="2"
+        app:layout_constraintBottom_toTopOf="@id/textview_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_register" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/account"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/below_average_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_terms" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/below_average_margin"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/sign"
+        android:textColor="@color/white"
+        android:textSize="@dimen/below_average_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/textview_account"
+        app:layout_constraintStart_toEndOf="@id/textview_account"
+        app:layout_constraintTop_toTopOf="@id/textview_account" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
